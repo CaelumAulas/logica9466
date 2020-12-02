@@ -1,0 +1,25 @@
+<meta charset="utf-8">
+<h1>Salário do Vendedor</h1>
+
+<script>
+
+    var qtd_carros = parseInt(prompt('Digite a quantidade de carros vendidos:'))
+    var total_vendas = parseFloat(prompt('Total das vendas:').replace(',', '.'))
+    var salario_fixo = parseFloat(prompt('Salário fixo:').replace(',', '.'))
+    var comissao_por_carro = parseFloat(prompt('Comissão por carro vendido:').replace(',', '.'))
+
+    var total_comissao_fixa = comissao_por_carro * qtd_carros
+    var total_comissao_vendas = total_vendas * 0.05
+    var salario_final = salario_fixo + total_comissao_fixa + total_comissao_vendas
+
+    document.write(`
+        Salário Fixo: R$ ${salario_fixo.toFixed(2).replace('.', ',')} <br>
+        Total da Comissão por Carro Vendido: R$ ${total_comissao_fixa.toFixed(2).replace('.', ',')} <br>
+        Total das Vendas: R$ ${total_vendas.toFixed(2).replace('.', ',')} <br>
+        Total da Comissão sobre o Total das Vendas (5%): R$ ${total_comissao_vendas.toFixed(2).replace('.', ',')} <br>
+        <br>
+        Salário Final: R$ ${salario_final.toFixed(2).replace('.', ',')}
+    `)
+
+
+</script>

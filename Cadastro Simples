@@ -1,0 +1,13 @@
+Problema:
+    Crie um algoritmo para realização de cadastros pedindo ao usuário que informe as seguintes informações:
+
+        1) Nome
+        2) Sobrenome
+        3) E-mail
+        4) Ano de Nascimento
+
+    Exibir na tela, a seguinte mensagem:
+
+        Olá, [NOME COMPLETO DO USUARIO]!
+        Seu e-mail é: [EMAIL DO USUARIO]
+        Sua idade é: [IDADE DO USUARIO] anos

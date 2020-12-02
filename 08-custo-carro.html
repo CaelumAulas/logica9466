@@ -1,0 +1,15 @@
+<meta charset="utf-8">
+<h1>Custo do Carro para o Consumidor</h1>
+
+<script>
+
+    var custo_fabrica = parseFloat(prompt('Custo de Fábrica:').replace(',', '.'))
+    var custo_distribuidor = custo_fabrica * 0.28
+    var custo_impostos = custo_fabrica * 0.45
+    var custo_consumidor = custo_fabrica + custo_distribuidor + custo_impostos
+
+    document.write(`
+        Custo Final (Consumidor): R$ ${custo_consumidor.toFixed(2)}
+    `)
+
+</script>

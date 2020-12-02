@@ -1,0 +1,15 @@
+Crie um algoritmo que peça as informações necessárias
+para calcular a área de triângulos.
+
+Após os cálculos exiba na tela a seguinte mensagem
+
+A área do triangulo é: X.XX m²
+
+--------------------------------
+
+Do eu preciso:
+    a) altura (float)
+    b) base (float)
+
+Fórmula do cálculo:
+    area = base x altura / 2

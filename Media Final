@@ -1,0 +1,5 @@
+Crie um algoritmo que leia três notas de um aluno, calcule e exiba a média final deste aluno. Considere que a média a ser calculada é ponderada e que o peso das notas são: 2, 3 e 5.
+
+Fórmula: 
+
+    (n1 x 2) + (n2 x 3) + (n3 x 5) ÷ 10
