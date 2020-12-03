@@ -1,0 +1,12 @@
+17-formulario-produto.html
+-------------------------------------------------------------------------
+
+Crie um formulário com campos para receber: nome do produto, preço do produto e percentual de desconto.
+No final do formulário, adicione um botão chamado "Aplicar Desconto".
+Quando esse botão for clicado, colete as informações do formulário e exiba na tela os seguintes dados:
+
+    Nome do Produto: [NOME_PRODUTO]
+    Preço: R$ [PRECO_PRODUTO]
+    Valor do Desconto: R$ [VALOR_DESCONTO_CALCULADO]
+
+    Preço final com Desconto: R$ [PRECO_FINAL_PRODUTO]

@@ -1,0 +1,47 @@
+<meta charset="utf-8">
+<h1>Função Simples | Confeitaria</h1>
+
+<button onclick="pegarBoloLaranja()">
+    Quero um bolo de Laranja
+</button>
+
+<button onclick="pegarBoloMaca()">
+    Quero um bolo de Maçã
+</button>
+
+<button onclick="pegarBoloChocolate()">
+    Quero um bolo de Chocolate
+</button>
+
+<script>
+
+    function pegarBoloChocolate() {
+        document.write(`
+            Aqui está seu bolo de Chocolate... <br>
+            <img src="bolo-chocolate.jpg" width="200"> <br><br>
+            <button onclick="window.location.reload()">
+                Voltar
+            </button>
+        `)
+    }
+
+    function pegarBoloLaranja() {
+        document.write(`
+            Aqui está seu bolo de Laranja... <br>
+            <img src="bolo-laranja.jpg" width="200"> <br><br>
+            <button onclick="window.location.reload()">
+                Voltar
+            </button>
+        `)
+    }
+
+    function pegarBoloMaca() {
+        document.write(`
+            Aqui está seu bolo de Maçã... <br>
+            <button onclick="window.location.reload()">
+                Voltar
+            </button>
+        `)
+    }
+
+</script>

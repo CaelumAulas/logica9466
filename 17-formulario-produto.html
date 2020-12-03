@@ -1,0 +1,49 @@
+<meta charset="utf-8">
+<h1>Formulário | Produto com Desconto</h1>
+
+<p>
+    Nome do Produto: <br>
+    <input type="text" id="campoNomeProduto" />
+</p>
+
+<p>
+    Preço do Produto: <br>
+    <input type="text" id="campoPrecoProduto" />
+</p>
+
+<p>
+    Desconto (%): <br>
+    <input type="range" min="5" max="15" step="5" id="campoPercentualDesconto" />
+    <output id="exibicaoDesconto">
+        10%
+    </output>
+</p>
+
+<button onclick="aplicarDesconto()">
+    Aplicar Desconto
+</button>
+
+<script>
+
+    campoPercentualDesconto.oninput = () => exibicaoDesconto.textContent = campoPercentualDesconto.value + '%';
+
+    function aplicarDesconto()
+    {
+        var nomeProduto = campoNomeProduto.value
+        var preco = parseFloat(campoPrecoProduto.value.replace(',', '.'))
+        var desconto = parseFloat(campoPercentualDesconto.value.replace(',', '.'))
+
+        var valorDesconto = preco * desconto / 100
+        var precoFinal = preco - valorDesconto
+
+
+        document.write(`
+            Nome do Produto: ${nomeProduto} <br>
+            Preço: R$ ${preco.toFixed(2).replace('.', ',')} <br>
+            Valor do Desconto: R$ ${valorDesconto.toFixed(2).replace('.', ',')} <br><br>
+
+            Preço final com Desconto: R$ ${precoFinal.toFixed(2).replace('.', ',')} <br>
+        `)
+    }
+
+</script>

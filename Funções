@@ -1,0 +1,41 @@
+Variável: espaço na memória do computador que guarda uma informação pra ser usada quando necessário.
+
+Função: espaço na memória do computador que guarda uma lógica inteira pra ser processada/executada quando necessário.
+
+Sintaxe:
+
+    1) Criação de funções
+    
+        function nomeDaFuncao() {
+            // o código a ser armazenado e executado quando a função for chamada
+        } 
+
+    2) Execução de funções
+
+        nomeDaFuncao()
+
+1) Função Simples: Função especializada em resolver apenas um problema específico.
+
+2) Função com parâmetros: Função especializada porém flexível podendo receber informações externas para processamento.
+
+3) Função com retorno: Função que após o processamento, retorna seu resultado para armazenamento ou exibição. Dos três tipos, 
+ela é a mais flexível já que o programador fica livre
+para usar o resultado da operação como quiser em diferentes
+contextos.
+
+99% DO TEMPO UMA FUNÇÃO DE RETORNO ESTÁ OU NA FRENTE DE UMA VARIÁVEL OU DENTRO DA CHAMADA DE OUTRA FUNÇÃO.
+
+-----------------------------------------
+
+nomeDaFuncao() = Função no JavaScript
+
+toFixed() = cp e retorno
+replace() = cp e retorno 
+document.write() = cp
+prompt() = cp e retorno
+parseFloat() = cp e retorno
+parseInt() = cp e retorno
+alert() = cp 
+console.log() = cp 
+Number() = cp e retorno
+getFullYear() = retorno e simples

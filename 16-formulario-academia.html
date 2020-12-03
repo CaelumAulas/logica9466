@@ -1,0 +1,63 @@
+<meta charset="utf-8">
+<h1>Formulário | Academia Caelum</h1>
+<p>
+    Para realizar seu cadastro, preencha o formulário abaixo:
+</p>
+
+<p>
+    Nome: <br>
+    <input type="text" id="campoNome" />
+</p>
+
+<p>
+    Altura: <br>
+    <input type="text" id="campoAltura" />
+</p>
+
+<p>
+    Peso: <br>
+    <input type="text" id="campoPeso" />
+</p>
+
+<p>
+    Data de Nascimento: <br>
+    <input type="text" id="campoDataNascimento" />
+</p>
+
+<p>
+    <input type="checkbox" id="campoSouCardiaco" /> Tenho problemas cardíacos
+</p>
+
+<button onclick="cadastrar()">
+    Cadastrar
+</button>
+
+<script>
+
+    function cadastrar()
+    {
+        var nome = campoNome.value
+        var altura = parseFloat(campoAltura.value.replace(',', '.'))
+        var peso = parseFloat(campoPeso.value.replace(',', '.'))
+        var dataNascimento = campoDataNascimento.value
+        var imc = peso / altura ** 2
+
+        document.write(`
+            <h2>Parabéns! Cadastro realizado com sucesso.</h2>
+            <p>
+                Confira abaixo as informações cadastradas.
+            </p>
+
+            Nome: ${nome} <br>
+            Peso: ${peso} kg <br>
+            Altura: ${altura} m <br>
+            IMC: ${imc} <br>
+            Data de Nascimento: ${dataNascimento} <br>
+
+            <button onclick="window.location.reload()">
+                Voltar
+            </button>
+        `) 
+    }
+
+</script>
