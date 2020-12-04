@@ -1,0 +1,3 @@
+Faça um algoritmo para pedir: saldo, débito e crédito. Após a coleta, calcular e exibir o saldo atual (saldo atual = saldo - débito + crédito). Também verificar se saldo atual é maior ou igual a zero e exibir a mensagem 'Saldo Positivo' ou 'Saldo Negativo' de acordo.
+
+    

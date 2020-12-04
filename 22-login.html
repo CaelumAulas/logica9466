@@ -1,0 +1,36 @@
+<meta charset="utf-8">
+<h1>Login</h1>
+<p>
+    Para realizar o login, informe os dados abaixo:
+</p>
+
+<p>
+    Usuário: <br>
+    <input type="text" id="campoUsuario" />
+</p>
+
+<p>
+    Senha: <br>
+    <input type="password" id="campoSenha" />
+</p>
+
+<button onclick="logar()">
+    Login
+</button>
+
+<script>
+
+    function logar()
+    {
+        var usuario = campoUsuario.value
+        var senha = campoSenha.value 
+
+        if ((usuario == "caelum" || usuario == "caelum@teste.com.br") && senha == "wd01") {
+            document.write('Login realizado com sucesso!')
+        }
+        else {
+            alert('Dados inválidos, tente novamente!')
+        }
+    }
+
+</script>
