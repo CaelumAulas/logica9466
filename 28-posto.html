@@ -1,0 +1,38 @@
+<meta charset="utf-8">
+<h1>Posto - Custo do Combustível</h1>
+
+<script src="javascript/formataMoeda.js"></script>
+<script src="javascript/pegaNumero.js"></script>
+
+<script>
+
+    var litros = pegaFloat('Quantidade de litros:')
+    var tipoCombustivel = prompt('Tipo do Combustível (A-Álcool ou G-Gasolina):').toUpperCase()
+
+    if (tipoCombustivel == "A" && litros <= 20) {
+        // desconto 3% sobre 2,90
+        var total = (2.9 - (2.9 * 0.03)) * litros
+    }
+    else if (tipoCombustivel == "A" && litros > 20) {
+        // desconto 5% sobre 2,90
+        var total = (2.9 - (2.9 * 0.05)) * litros
+    }
+    else if (tipoCombustivel == "G" && litros <= 20) {
+        // desconto 4% sobre 3,30
+        var total = (3.3 - (3.3 * 0.04)) * litros
+    }
+    else if (tipoCombustivel == "G" && litros > 20) {
+        // desconto 6% sobre 3,30
+        var total = (3.3 - (3.3 * 0.06)) * litros
+    }
+    else {
+        // Dados inválidos, tente novamente!
+        alert('Dados inválidos, tente novamente!')
+        window.location.reload()
+    }
+
+    document.write(`
+        O total a ser pago é: ${formataMoeda(total)}
+    `)
+
+</script>

@@ -1,0 +1,21 @@
+<meta charset="utf-8">
+<h1>Estoque</h1>
+
+<script src="javascript/pegaNumero.js"></script>
+<script>
+
+    var qtd_atual = pegaInt('Informe a quantidade atual:')
+    var qtd_max = pegaInt('Informe a quantidade máxima:')
+    var qtd_min = pegaInt('Informe a quantidade mínima:')
+    var qtd_media = (qtd_max + qtd_min) / 2
+
+    document.write(`Quantidade média: ${qtd_media} <br>`)
+
+    if (qtd_atual >= qtd_media) {
+        document.write(`Não efetuar compra`)
+    }
+    else {
+        document.write(`Efetuar compra`)
+    }
+
+</script>

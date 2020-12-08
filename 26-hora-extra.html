@@ -1,0 +1,32 @@
+<meta charset="utf-8">
+<h1>Estoque</h1>
+
+<script src="javascript/pegaNumero.js"></script>
+<script src="javascript/formataMoeda.js"></script>
+<script>
+
+    var valor_hora_regular = pegaFloat('Informe o valor da hora regular:')
+    var horas_trabalhadas = pegaInt('Informe a quantidade de horas trabalhadas no mês:')
+    var horas_regulares = 40 * 4
+
+    if (horas_trabalhadas <= horas_regulares) {
+        // não tem hora extra
+        var salario = horas_trabalhadas * valor_hora_regular
+    }
+    else {
+        // tem hora extra
+        var horas_extras = horas_trabalhadas - horas_regulares
+        var valor_hora_extra = valor_hora_regular + valor_hora_regular / 2
+
+        var salario_horas_regulares = horas_regulares * valor_hora_regular
+        var salario_horas_extras = valor_hora_extra * horas_extras
+        
+        var salario = salario_horas_regulares + salario_horas_extras
+    }
+
+    document.write(`
+        Salário: ${formataMoeda(salario)}
+    `)
+
+
+</script>

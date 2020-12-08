@@ -1,0 +1,24 @@
+<meta charset="utf-8">
+<h1>Xadrez</h1>
+
+<script src="javascript/pegaNumero.js"></script>
+<script>
+
+    var hora_inicio = pegaInt('Informe a hora de início do jogo:')
+    var hora_fim = pegaInt('Informe a hora de término do jogo:')
+
+    if (hora_fim > hora_inicio) {
+        var duracao = hora_fim - hora_inicio
+    }
+    else if (hora_fim == hora_inicio) {
+        var duracao = 24
+    }
+    else {
+        var duracao = (24 - hora_inicio) + hora_fim
+    }
+
+    document.write(`
+        Seu jogo teve a duração de ${duracao} horas
+    `)
+    
+</script>
