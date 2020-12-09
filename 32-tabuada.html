@@ -1,0 +1,49 @@
+<meta charset="utf-8">
+<h1>Tabuada</h1>
+
+<p>Preencha o campo abaixo para visualizar a tabuada do número escolhido:</p>
+
+<p>
+    Número: <br>
+    <input type="number" id="campoNumero">
+    <button onclick="verTabuada()">
+        Ver Tabuada
+    </button>
+</p>
+
+<p id="mostradorTabuada">
+    Você verá os resultados da Tabuada aqui :)
+</p>
+
+<script>
+
+    function verTabuada()
+    {
+        var numero = parseInt(campoNumero.value)
+
+        if (isNaN(numero)) {
+            alert('Número inválido!')
+        }
+        else {
+
+            mostradorTabuada.innerHTML = ""
+
+            for (var multiplicador = 1; multiplicador <= 10; multiplicador++)
+            {
+                var resultado = numero * multiplicador
+                mostradorTabuada.innerHTML += `${numero} x ${multiplicador} = ${resultado} <br>`
+            }
+
+
+            // var multiplicador = 1
+            // mostradorTabuada.innerHTML = ""
+            // while (multiplicador <= 10) 
+            // {
+            //     var resultado = numero * multiplicador
+            //     mostradorTabuada.innerHTML += `${numero} x ${multiplicador} = ${resultado} <br>`
+            //     multiplicador++
+            // }
+        }
+    }    
+
+</script>

@@ -1,0 +1,24 @@
+<meta charset="utf-8">
+<h1>Arrays em JavaScript</h1>
+<script>
+
+    // Array<string>
+    // Todo array começa na posição ZERO (0)
+    var listaSupermercado = ["Arroz", "Feijão", "Batata", "Óleo", "Vinho", "Vodka", "Macarrão", "Smirnoff Ice"]
+    var posicaoUltimo = listaSupermercado.length - 1
+    
+    alert('O primeiro item da lista é: ' + listaSupermercado[0])
+    alert('O último item da lista é: ' + listaSupermercado[posicaoUltimo])
+
+    document.write(`
+        Sua lista de supermercados tem <b>${ listaSupermercado.length } item(ns):</b><br>
+        <ol>
+            <li>
+            ${ listaSupermercado.join('</li><li>') }
+            </li>
+        </ol>
+    `)
+
+</script>
+
+
