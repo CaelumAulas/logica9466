@@ -1,0 +1,34 @@
+<meta charset="utf-8">
+<h1>Pares e Ímpares</h1>
+<script src="javascript/pegaNumero.js"></script>
+<script>
+
+    var impar_num = []
+    var par_num = []
+
+    for (var i = 1; i <= 7; i++)
+    {
+        var numero = pegaInt(`Informe o ${i}º número:`)
+        if (numero % 2 == 0) {
+            par_num.push(numero)
+        }
+        else if (numero % 2 == 1) {
+            impar_num.push(numero)
+        }
+        else {
+            alert('Número inválido! Informe novamente')
+            i--;
+        }
+    }
+
+    document.write(`
+        Pares: ${par_num} <br>
+        Qtd Pares: ${par_num.length}
+        <hr>
+        Ímpares: ${impar_num} <br>
+        Qtd Ímpares: ${impar_num.length}
+    `)
+
+
+
+</script>

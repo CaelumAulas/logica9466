@@ -1,0 +1,44 @@
+<meta charset="utf-8">
+<h1>Notas dos Alunos</h1>
+
+<script src="javascript/pegaNumero.js"></script>
+<script>
+
+    var numero_alunos = pegaInt('Informe o número de alunos para cálculo das médias:')
+
+    while (isNaN(numero_alunos) || numero_alunos < 1) {
+        alert('O número de alunos deve ser maior ou igual a 1!')
+        numero_alunos = pegaInt('Informe o número de alunos para cálculo das médias:')
+    }
+
+    for (var i = 1; i <= numero_alunos; i++)
+    {
+        var nome_aluno = prompt(`Informe o nome do ${i}º aluno:`)
+
+        while (nome_aluno.trim() == '' || isNaN(nome_aluno) == false) {
+            alert('Nome informado é inválido!')
+            nome_aluno = prompt(`Informe o nome do ${i}º aluno:`)
+        }
+
+        var total_notas = 0
+
+        for (var n = 1; n <= 3; n++) 
+        {
+            var nota = pegaFloat(`Informe a ${n}ª nota do aluno ${nome_aluno}:`)
+
+            while (isNaN(nota) || nota < 0 || nota > 10) {
+                alert('Nota inválida!')
+                nota = pegaFloat(`Informe a ${n}ª nota do aluno ${nome_aluno}:`)
+            }
+
+            total_notas = total_notas + nota
+        }
+
+        var media = total_notas / 3
+
+        document.write(`
+            A média do aluno ${nome_aluno} é ${media.toFixed(1)} <br>
+        `)
+    }
+
+</script>

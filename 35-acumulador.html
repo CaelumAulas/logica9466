@@ -1,0 +1,18 @@
+<meta charset="utf-8">
+<h1>Acumulador</h1>
+
+<script src="javascript/pegaNumero.js"></script>
+<script>
+
+    var total = 0
+
+    for (var i = 1; i <= 10; i++)
+    {
+        var numero = pegaInt(`Informe o ${i}º número:`)
+        total = total + numero
+    }
+
+    document.write(`Total da soma é: ${total}`)
+
+
+</script>
