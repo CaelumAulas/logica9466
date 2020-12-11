@@ -17,8 +17,15 @@
         numeroJogada++
         var numeroMisterioso = pegaNumeroAleatorio(0, 10)
         var chute = pegaInt('Tente advinhar o número sorteado:')
+        var chutesInvalidos = 0
 
         while (chute < 0 || chute > 10 || isNaN(chute)) {
+            chutesInvalidos++
+            if (chutesInvalidos == 3) {
+                alert('Game Over!')
+                break
+            }
+            
             chute = pegaInt('Chute inválido! Informe um número entre 0-10:')
         }
 

@@ -1,0 +1,20 @@
+<meta charset="utf-8">
+<h1>Todas as Copas do Mundo</h1>
+
+<script src="javascript/pegaPaisCopa.js"></script>
+<script>
+
+    var anoInicial = 1930
+    var anoFinal = new Date().getFullYear()
+
+    for (var anoCopa = anoInicial; anoCopa <= anoFinal; anoCopa += 4)
+    {
+        var pais = pegaPaisCopa(anoCopa)
+        document.write(`
+            ${anoCopa} - ${pais} <br>
+        `)
+    }
+
+
+
+</script>

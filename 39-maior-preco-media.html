@@ -1,0 +1,35 @@
+<meta charset="utf-8">
+<h1>Maior preço e Média</h1>
+
+<script src="javascript/pegaNumero.js"></script>
+<script src="javascript/formataMoeda.js"></script>
+<script>
+
+    var total = 0
+    var maior_produto = "" 
+    var maior_preco = 0
+
+    for (var i = 1; i <= 5; i++)
+    {
+        var nome_produto = prompt('Digite o nome do produto:')
+        var preco_produto = pegaFloat('Digite o preço do produto:')
+
+        // validar os dados antes de prosseguir
+
+        total += preco_produto
+
+        if (preco_produto > maior_preco) {
+            maior_produto = nome_produto
+            maior_preco = preco_produto
+        }
+    }
+
+    var media = total / 5
+
+    document.write(`
+        Produto de Maior preço: ${maior_produto} <br>
+        Valor do Produto: ${formataMoeda(maior_preco)} <br>
+        Média dos Produtos: ${formataMoeda(media)}
+    `)
+
+</script>

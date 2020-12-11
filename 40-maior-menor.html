@@ -1,0 +1,30 @@
+<meta charset="utf-8">
+<h1>Maior / Menor valor</h1>
+
+<script src="javascript/pegaNumero.js"></script>
+<script>
+
+    var lista_numeros = []
+    var maior = 0
+    var menor = 0
+
+    for (var i = 1; i <= 7; i++)
+    {
+        var numero = pegaFloat(`Informe o ${i}º número:`)
+        lista_numeros.push(numero)
+
+        if (numero > maior) {
+            maior = numero
+        }
+        else if (menor > numero || menor == 0) {
+            menor = numero
+        }
+    }
+
+    document.write(`
+        Menor: ${menor} <br>
+        Maior: ${maior} <br>
+        Números informados: ${lista_numeros}
+    `)
+
+</script>
